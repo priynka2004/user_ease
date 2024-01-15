@@ -18,13 +18,13 @@ class Address {
   }
 
   Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = Map<String, dynamic>();
-    data['street'] = this.street;
-    data['suite'] = this.suite;
-    data['city'] = this.city;
-    data['zipcode'] = this.zipcode;
-    if (this.geo != null) {
-      data['geo'] = this.geo!.toJson();
+    final Map<String, dynamic> data = <String, dynamic>{};
+    data['street'] = street;
+    data['suite'] = suite;
+    data['city'] = city;
+    data['zipcode'] = zipcode;
+    if (geo != null) {
+      data['geo'] = geo!.toJson();
     }
     return data;
   }
